@@ -26,8 +26,7 @@ class Todo extends React.Component {
   render() {
     return (
       <div>
-        <input type="submit" value="X"></input>
-        <li>{this.props.task}</li>
+        <li><input type="submit" value="X"></input> {this.props.task}</li>
       </div>
     )
   }
