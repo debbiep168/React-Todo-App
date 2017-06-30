@@ -7,7 +7,11 @@ class Todo extends React.Component {
   render() {
     return (
       <div>
-        {this.props.completed ? <li><input type="submit" value="X"></input><strike> {this.props.task}</strike></li> : <li><input type="submit" value="X"></input> {this.props.task}</li>}
+        {this.props.completed ?
+          <li><input type="submit" value="X"></input>
+          <strike>{this.props.task}</strike></li> :
+          <li><input type="submit" value="X"></input>
+          {this.props.task}</li>}
       </div>
     )
   }
