@@ -32,5 +32,33 @@ class Todo extends React.Component {
   }
 }
 
-ReactDOM.render(<TodoList />,
+class InputLine extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <form>
+        <input type="text" value="Task"></input>
+        <input type="submit" value="Add Todo Task"></input>
+      </form>
+    );
+  }
+}
+
+class TodoApp extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+    <div>
+      <InputLine />
+      <TodoList />
+    </div>
+    );
+  }
+}
+
+ReactDOM.render(<TodoApp />,
    document.getElementById('root'));
