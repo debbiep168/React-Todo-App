@@ -1,7 +1,5 @@
 import React from "react";
 
-var dummyData = [{taskText: 'Clean the dishes', completed: true}, {taskText: 'Vacuum the room', completed: false}, {taskText: 'Make the bed', completed: true}, {taskText: 'Buy groceries', completed: false}];
-
 class TodoList extends React.Component {
   constructor(props) {
     super(props);
@@ -10,7 +8,7 @@ class TodoList extends React.Component {
     return(
       <div>
         <ul>
-          {dummyData.map((todo) => <Todo key={todo.taskText} task={todo.taskText} completed={todo.completed}/>)}
+          {this.props.todos.map((todo) => <Todo key={todo.taskText} task={todo.taskText} completed={todo.completed}/>)}
         </ul>
       </div>
     );
