@@ -1,4 +1,5 @@
 import React from "react";
+import Todo from './Todo.js'
 
 class TodoList extends React.Component {
   constructor(props) {
@@ -12,19 +13,6 @@ class TodoList extends React.Component {
         </ul>
       </div>
     );
-  }
-}
-
-class Todo extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    return (
-      <div>
-        {this.props.completed ? <li><input type="submit" value="X"></input><strike> {this.props.task}</strike></li> : <li><input type="submit" value="X"></input> {this.props.task}</li>}
-      </div>
-    )
   }
 }
 
