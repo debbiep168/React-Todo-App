@@ -36,7 +36,6 @@ class TodoApp extends React.Component {
   }
 
   render() {
-    console.log(this.state);
     return (
     <div>
       <InputLine submit={(task) => {this.addTodo(task)}}/>
