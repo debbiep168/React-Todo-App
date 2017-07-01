@@ -8,10 +8,20 @@ class Todo extends React.Component {
     return (
       <div>
         {this.props.completed ?
-          <li><input type="submit" value="X"></input>
-          <strike>{this.props.task}</strike></li> :
-          <li><input type="submit" value="X"></input>
-          {this.props.task}</li>}
+          <li>
+              <input onClick={() => this.props.xClick()} type="submit" value="X">
+              </input> {' '}
+          <span onClick={() => this.props.toggleTask()}>
+            <strike>{this.props.task}</strike>
+          </span>
+        </li> :
+          <li onClick={() => this.props.toggleTask()}>
+            <input onClick={() => this.props.xClick()} type="submit" value="X">
+            </input> {' '}
+            <span onClick={() => this.props.toggleTask()}>
+              {this.props.task}
+            </span>
+          </li>}
       </div>
     )
   }
